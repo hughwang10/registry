@@ -4,5 +4,5 @@
 * sudo update-ca-certificates
 * sudo service docker restart
 * docker login registry-afglab:5000
-** admin
-** wapwap12	
+	* admin
+	* wapwap12
