@@ -5,6 +5,7 @@
   gather_facts: false
 
   vars:
+    server_cn: registry-afglab
     server_passwd: wapwap12
     server_name: registry
     server_path: /opt/registry
@@ -30,7 +31,7 @@
         -keyout "{{server_name}}.key"
         -passout "pass:{{server_passwd}}"
         -out "{{server_name}}.csr"
-        -subj "/C=IE/ST=Dublin/L=Dublin/O=LMI Security/OU=AFG Lab/CN=aio"
+        -subj "/C=IE/ST=Dublin/L=Dublin/O=LMI Security/OU=AFG Lab/CN={{server_cn}}"
       args:
         chdir: "{{server_path}}/cert"
         creates: "{{server_name}}.key"
